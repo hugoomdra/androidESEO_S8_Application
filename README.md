@@ -2,6 +2,7 @@
 
 # Projet Final Développement des applications client / serveur sous Android
 > **Rendu de VALLET Antoine et MADUREIRA Hugo**
+
 > *Dernière mise à jour le 14 juin 2021*
 Dans le cadre de la matière *Développement des applications client / serveur sous Android* de notre cursus Ingénieur (Semestre 8), nous avons du développer en binôme une application en suivant **[un cahier des charges](#cahier-des-charges)** détaillés.
 
