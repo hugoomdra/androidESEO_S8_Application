@@ -2,65 +2,92 @@ package com.example.projetfinalandroid.ui
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.hardware.Sensor
+import android.hardware.SensorEventListener
+import android.hardware.SensorManager
 import android.os.Bundle
-import android.os.StrictMode
+import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.projetfinalandroid.R
-import com.example.projetfinalandroid.data.LocalPreferences
 import com.example.projetfinalandroid.service.ApiService
+import kotlinx.android.synthetic.main.activity_data.*
+import kotlinx.android.synthetic.main.activity_easter_egg.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-import java.lang.Exception
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Bouton localisation
-        btn_actualiser.setOnClickListener { ;
-            refreshData();
+        // Bouton actualiser
+        btn_actualiser.setOnClickListener {
+            val token = tf_token.text.toString();
+            refreshData(token);
 //            finish()
         }
-    }
 
-
-    fun refreshData(){
-
-        System.out.println("super test")
-
-        // Votre code de d'habitude…
-        CoroutineScope(Dispatchers.IO).launch {
-
-            try{
-                System.out.println("test test avant appel")
-            val array = ApiService.instance.readData("123456789")
-                System.out.println("test test apres appel")
-                System.out.println(array)
-            }catch (err : Exception){
-                System.out.println("HHH")
-            }
-
-//            runCatching {
-//
-//
-//                runOnUiThread{
-//                    System.out.println("test test")
-////                    dataSource.addAll(arrStatus)
-//                    Toast.makeText(this@MainActivity, "Résultat de l'appel réseau", Toast.LENGTH_SHORT).show()
-//                }
-//            }
+        // Bouton voir données
+        btn_see_data.setOnClickListener {
+            val token = tf_token.text.toString();
+            val intent = Intent(this, DataActivity::class.java)
+            intent.putExtra("token", token);
+            startActivity(intent)
         }
 
+    }
 
+    fun checkTokenNull(token: String) : Boolean{
+        if(token == ""){
+            Toast.makeText(this, "Veuillez fournir un token", Toast.LENGTH_SHORT).show()
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    fun refreshData(token: String){
+
+        val sensorManager : SensorManager
+        val lightSensor : Sensor
+        val lightEventListener : SensorEventListener
+        val root : View
+        val maxValue : Float
+
+        sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager;
+        lightSensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
+
+        sensorManager.registerListener(this, lightSensor, SensorManager.SENSOR_DELAY_NORMAL)
+
+        System.out.println(lightSensor)
+
+        CoroutineScope(Dispatchers.IO).launch {
+
+            try {
+                val data = ApiService.instance.refreshData(token, lightSensor.power.toString(), "14", "18", "10", "1")
+
+                runOnUiThread{
+                    Toast.makeText(this@MainActivity, "Données refresh", Toast.LENGTH_SHORT).show()
+                }
+
+            }catch (err: Exception){
+
+                runOnUiThread{
+                    Toast.makeText(this@MainActivity, "ERREUR...", Toast.LENGTH_SHORT).show()
+                }
+
+            }
+        }
 
     }
+
+
+
+
 
 //    override fun onResume() {
 //        super.onResume()
@@ -83,6 +110,7 @@ class MainActivity : AppCompatActivity() {
 //    }
 
     companion object {
+
         fun getStartIntent(context: Context): Intent {
             return Intent(context, MainActivity::class.java)
         }

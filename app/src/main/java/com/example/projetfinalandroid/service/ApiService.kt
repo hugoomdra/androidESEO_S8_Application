@@ -8,18 +8,26 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Query
+import retrofit2.http.*
 import java.util.*
 import java.util.concurrent.TimeUnit
 
 interface ApiService {
 
     // Début définition des différentes API disponible sur votre serveur
-    @GET("/todos/1")
+    @GET("/public/api/data")
     suspend fun readData(@Query("device_token") device_token: String): Array<Data>
+
+    @FormUrlEncoded
+    @POST("/public/api/data")
+    suspend fun refreshData(
+        @Field("device_token") device_token: String,
+        @Field("luminosity") luminosity: String,
+        @Field("battery_level") battery_level: String,
+        @Field("pressure") pressure: String,
+        @Field("temperature") temperature: String,
+        @Field("position") position: String,
+    ): Data
 //
 //    @POST("/status")
 //    suspend fun writeStatus(@Body status: SampleObject): Array<SampleObject>
@@ -52,12 +60,8 @@ interface ApiService {
                 })
                 .build()
 
-            System.out.println("test après build")
-            System.out.println(okHttpClient)
-
-
             return Retrofit.Builder()
-                .baseUrl("https://jsonplaceholder.typicode.com") // Mieux -> BuildConfig.URI_REMOTE_SERVER, oui oui écrire en dur un lien est une TRÈS MAUVAISE IDÉE !
+                .baseUrl("https://hidden-chamber-01030.herokuapp.com/") // Mieux -> BuildConfig.URI_REMOTE_SERVER, oui oui écrire en dur un lien est une TRÈS MAUVAISE IDÉE !
                 .client(okHttpClient)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build()
