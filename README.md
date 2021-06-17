@@ -7,15 +7,37 @@
 
 Dans le cadre de la matière *Développement des applications client / serveur sous Android* de notre cursus Ingénieur (Semestre 8), nous avons du développer en binôme une application en suivant **[un cahier des charges](#cahier-des-charges)** détaillés.
 
+## API 
+
+Voici le lien du repository de l'API : https://github.com/hugoomdra/androidESEO_S8_API
+
+Nous avons utilisé LARAVEL, un framework PHP. L'API est hebergé sur HEROKU.
+
+Voici la liste des liens disponible dessus :
+
+- **[GET]** https://hidden-chamber-01030.herokuapp.com/public/api/data : Permet d'afficher toutes les données.
+- **[GET]** https://hidden-chamber-01030.herokuapp.com/public/api/data?device_token=TOKEN : Permet d'afficher les données un TOKEN bien précis.
+- **[GET]** https://hidden-chamber-01030.herokuapp.com/public/api/devices : Permet d'afficher tous les TOKEN disponible
+- **[POST]** https://hidden-chamber-01030.herokuapp.com/public/api/data : Permet d'ajouter une donnée pour un device précis. Il faut fournir les paramètres suivant :
+  - device_token
+  - luminosity
+  - battery_level
+  - pressure
+  - temperature
+  - position
+- **[POST]** https://hidden-chamber-01030.herokuapp.com/public/api/devices : Permet d'ajouter un nouveau tokens. Il faut fournir les paramètres suivant :
+  - nom
+  - device_token
+
 ## Vidéo
 
-Voici **[la vidéo]()** qui récapitule les fonctionnalités de l'application.
+Voici **[la vidéo]()** qui récapitule les fonctionnalités de l'application. (Pas encore disponible)
 
 ## Cahier des charges
 
 > *Cette partie est un copier coller du **[TP à rendre](https://cours.brosseau.ovh/tp/android/app-avance-android.html)** de **[Valentin Brosseau](https://www.linkedin.com/in/valentin-brosseau-99b98827/)**.*
 
-> ❌ = Je n'ai pas réussis ou eu le temps de réaliser la fonctionnalité
+> ❌ = Nous n'avons pas réussis ou eu le temps de réaliser la fonctionnalité
 > 
 > ✔️ = La fonctionnalité est complètement fonctionnel
 
