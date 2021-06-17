@@ -25,20 +25,20 @@ L'application à fournir doit contenir au minimum les éléments suivants :
 
 Serveur :
 
-- ❌ Stocker l'information dans une base de données.
-- ❌ Créer un client.
-- ❌ Récupérer les dernières données d'un client via son UUID / ID / TOKEN.
-- ❌ Bonus liste de l'ensemble des clients présents en base de données.
-- ❌ Bonus obtention des données historiques d'un client via son UUID / ID / TOKEN.
+- ✔️ Stocker l'information dans une base de données.
+- ✔️ Créer un client.
+- ✔️ Récupérer les dernières données d'un client via son UUID / ID / TOKEN.
+- ✔️ Bonus liste de l'ensemble des clients présents en base de données.
+- ✔️ Bonus obtention des données historiques d'un client via son UUID / ID / TOKEN.
 
 Client :
 
-- ❌ Les données d'un client choisi (via saisie ou flash QRCode du code)
-- ❌ L'affichage des données du client devra indiquer l'horodatage de la dernière collecte.
-- ❌ Un bouton d'actualisation.
-- ❌ Possibilités d'affichage (implémentation au choix) :
-- ❌ Via une Recyclerview simple (mais avec des noms des capteurs dans la langue du client).
-- ❌ Via un Layout dédié avec des icônes en fonction du type de capteurs (une carte OpenStreetMap peut-être utilisée pour la position GPS).
+- ✔️ Les données d'un client choisi (via saisie ou flash QRCode du code)
+- ✔️ L'affichage des données du client devra indiquer l'horodatage de la dernière collecte.
+- ✔️ Un bouton d'actualisation.
+- ✔️ Possibilités d'affichage **(implémentation au choix)** :
+  - ❌ Via une Recyclerview simple (mais avec des noms des capteurs dans la langue du client).
+  - ✔️ Via un Layout dédié avec des icônes en fonction du type de capteurs (une carte OpenStreetMap peut-être utilisée pour la position GPS).
 - ❌ Bonus la vue peut-être découpée en deux tabs afin d'avoir une vue listant l'ensemble des collecteurs de données connues par le serveur. Chaque ligne contiendra une action permettant d'afficher un « client précis » (donc sans connaitre son code préalablement).
 - ❌ Bonus affichage des données historiques d'un client.
   
