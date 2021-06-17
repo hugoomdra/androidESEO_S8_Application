@@ -24,7 +24,7 @@ class DataActivity : AppCompatActivity() {
         val token = intent.getStringExtra("token").toString()
 
         supportActionBar?.apply {
-            setTitle(getString(R.string.topbar_data_activity) + token)
+            setTitle(getString(R.string.topbar_data_activity) + " " + token)
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
         }
@@ -77,6 +77,7 @@ class DataActivity : AppCompatActivity() {
                         txt_pressure.text = array[array.size - 1].pressure.toString() + " hPa";
                         txt_temperature.text = array[array.size - 1].temperature.toString() + " °C";
                         txt_date.text = array[array.size - 1].date.toString() + "";
+                        txt_nom.text = array[array.size - 1].nom.toString() + "";
 
 
                     }

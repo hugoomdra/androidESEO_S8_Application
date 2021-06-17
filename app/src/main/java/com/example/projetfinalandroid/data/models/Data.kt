@@ -13,6 +13,7 @@ data class Data (
     var created_at: String,
     var update_at: String,
     var date: String,
+    var nom: String,
 ){
 
     override fun toString(): String {
