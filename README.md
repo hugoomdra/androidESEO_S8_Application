@@ -28,8 +28,8 @@ Serveur :
 - ✔️ Stocker l'information dans une base de données.
 - ✔️ Créer un client.
 - ✔️ Récupérer les dernières données d'un client via son UUID / ID / TOKEN.
-- ✔️ Bonus liste de l'ensemble des clients présents en base de données.
-- ✔️ Bonus obtention des données historiques d'un client via son UUID / ID / TOKEN.
+- ✔️ Bonus liste de l'ensemble des clients présents en base de données. (https://hidden-chamber-01030.herokuapp.com/public/api/devices)
+- ✔️ Bonus obtention des données historiques d'un client via son UUID / ID / TOKEN. (https://hidden-chamber-01030.herokuapp.com/public/api/data?device_token=TOKEN)
 
 Client :
 
