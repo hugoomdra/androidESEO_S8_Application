@@ -2,6 +2,7 @@ package com.example.projetfinalandroid.service
 
 import androidx.viewbinding.BuildConfig
 import com.example.projetfinalandroid.data.models.Data
+import com.example.projetfinalandroid.data.models.Device
 import com.google.gson.GsonBuilder
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -28,6 +29,15 @@ interface ApiService {
         @Field("temperature") temperature: String,
         @Field("position") position: String,
     ): Data
+
+    @FormUrlEncoded
+    @POST("/public/api/devices")
+    suspend fun createToken(
+        @Field("nom") nom: String,
+        @Field("device_token") device_token: String,
+    ): Device
+
+
 //
 //    @POST("/status")
 //    suspend fun writeStatus(@Body status: SampleObject): Array<SampleObject>
@@ -46,8 +56,6 @@ interface ApiService {
          */
         private fun build(): ApiService {
             val gson = GsonBuilder().create() // JSON deserializer/serializer
-            System.out.println("test avant build")
-
 
             // Create the OkHttp Instance
             val okHttpClient = OkHttpClient.Builder()

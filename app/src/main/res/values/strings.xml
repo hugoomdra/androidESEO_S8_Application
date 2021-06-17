@@ -1,38 +1,31 @@
 <resources>
-    <string name="app_name">Projet Final Android</string>
+
+
     <string name="current_year" translatable="false">2021</string>
+    <string name="app_name" translatable="false">ESEO S8 Application</string>
 
-    <string name="topbar_localisation">Aller à l\'ESEO</string>
-    <string name="topbar_parametre">Paramètres</string>
+    <string name="luminosity">Luminosité</string>
+    <string name="battery">Batterie</string>
+    <string name="pressure">Pression</string>
+    <string name="temperature">Température</string>
+    <string name="position">Position</string>
 
-    <string name="easter_egg_consigne">Devinez le nombre entre 0 et 20</string>
-    <string name="easter_egg_btn_soumettre">SOUMETTRE</string>
-    <string name="easter_egg_bonne_reponse">Voilaaaaa c\'est la note qu\'il me faut bien joué</string>
-    <string name="easter_egg_mauvaise_reponse_1">Entre 0 et 20 tu sais lire ?</string>
-    <string name="easter_egg_mauvaise_reponse_2">C\'est plus ! C\'est une bonne note mais bon..</string>
-    <string name="easter_egg_mauvaise_reponse_3">C\'est plus ! Je valide le semestre mais bon voila quoi..</string>
-    <string name="easter_egg_mauvaise_reponse_4">C\'est plus ! Je valide même pas le semestre avec ça..</string>
-    <string name="easter_egg_mauvaise_reponse_5">C\'est plus ! Je pense mériter une meilleure note quand même..</string>
-
-    <string name="historique_btn_vider_liste">VIDER LA LISTE</string>
-
-    <string name="localisation_consigne">Quelle est la distance me séparant de l\'ESEO ?</string>
-    <string name="localisation_btn_action">ME LOCALISER</string>
+    <string name="btn_actualiser">Actualiser les données</string>
+    <string name="btn_see_data">Voir les dernières données</string>
+    <string name="btn_generate_token">Créer un nouveau token</string>
+    <string name="title_activity_token">Création dun nouveau TOKEN</string>
+    <string name="tf_nom">Nom</string>
+    <string name="tf_token">Token</string>
+    <string name="btn_create">Créer</string>
 
 
-    <string name="main_menu_localisation">Localisation</string>
-    <string name="main_menu_historique">Historique</string>
-    <string name="main_menu_parametre">Paramètres</string>
-    <string name="main_menu_easter_egg" translatable="false">Easter Egg</string>
-    <string name="topbar_easter_egg" translatable="false">Easter Egg</string>
-    <string name="parametre_list_1">Paramètre application</string>
-    <string name="parametre_list_2">Paramètre localisation</string>
-    <string name="parametre_list_3">Carte ESEO</string>
-    <string name="parametre_list_4">Site de l\'ESEO</string>
-    <string name="parametre_list_5">Me contacter</string>
-    <string name="parametre_list_6">A Propos de Moi</string>
-    <string name="parametre_mail_sujet">Contact depuis l\'application</string>
-    <string name="parametre_mail_message">Hey, je te contacte depuis l\'application car j\'aimerais te dire que ...</string>
-    <string name="topbar_historique">Historique des localisations</string>
-
+    <string name="topbar_data_activity">Données token : </string>
+    <string name="toast_no_data">Aucune donnée trouvée.</string>
+    <string name="toast_error">ERREUR...</string>
+    <string name="toast_ask_token">Veuillez fournir un token</string>
+    <string name="toast_data_refresh">Données actualisées</string>
+    <string name="toast_token_not_exist">Le token nexiste pas.</string>
+    <string name="topbar_token_activity">Création dun token</string>
+    <string name="toast_token_created">Token créé avec succès</string>
+    <string name="toast_token_existing">Le token existe déjà</string>
 </resources>

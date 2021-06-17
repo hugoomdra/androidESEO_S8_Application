@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Final Project Android</string>
-    <string name="topbar_localisation">Go to ESEO</string>
-    <string name="topbar_parametre">Settings</string>
-    <string name="easter_egg_consigne">Find the number between 0 and 20</string>
-    <string name="easter_egg_btn_soumettre">SUBMIT</string>
-    <string name="easter_egg_bonne_reponse">Perfect, it\'s the grade that I need</string>
-    <string name="easter_egg_mauvaise_reponse_1">Between 0 and 20 do you know how to read?</string>
-    <string name="easter_egg_mauvaise_reponse_2">It is more ! It\'s a good mark but hey ..</string>
-    <string name="easter_egg_mauvaise_reponse_3">It is more ! I validate the semester but hey ..</string>
-    <string name="easter_egg_mauvaise_reponse_4">It is more ! I don\'t even validate the semester with that ..</string>
-    <string name="easter_egg_mauvaise_reponse_5">It is more ! I think I deserve a higher grade anyway ..</string>
-    <string name="historique_btn_vider_liste">CLEAR LIST</string>
-    <string name="localisation_consigne">What is the distance between me and the ESEO ?</string>
-    <string name="localisation_btn_action">LOCATE ME</string>
-    <string name="main_menu_localisation">Location</string>
-    <string name="main_menu_historique">History</string>
-    <string name="main_menu_parametre">Settings</string>
-    <string name="parametre_list_1">Application settings</string>
-    <string name="parametre_list_2">Location settings</string>
-    <string name="parametre_list_3">Map ESEO</string>
-    <string name="parametre_list_4">Website ESEO</string>
-    <string name="parametre_list_5">Contact me</string>
-    <string name="parametre_list_6">About me</string>
-    <string name="parametre_mail_sujet">Contact from the app</string>
-    <string name="parametre_mail_message">Hey, I\'m contacting you from the app because I would like to tell you that ...</string>
-    <string name="topbar_historique">Location history</string>
+
+    <string name="luminosity">Luminosity</string>
+    <string name="battery">Battery</string>
+    <string name="pressure">Pressure</string>
+    <string name="temperature">Temperature</string>
+    <string name="position">Position</string>
+    <string name="btn_actualiser">Refresh data</string>
+    <string name="btn_see_data">See last data</string>
+    <string name="btn_generate_token">Create a new token</string>
+    <string name="title_activity_token">Creation of a new token</string>
+    <string name="tf_nom">Name</string>
+    <string name="btn_create">Create</string>
+    <string name="tf_token">Token</string>
+    <string name="toast_no_data">No data found</string>
+    <string name="toast_error">ERROR...</string>
+    <string name="toast_ask_token">Put a token please</string>
+    <string name="toast_data_refresh">Data refreshed</string>
+    <string name="toast_token_not_exist">Token not exist</string>
+    <string name="topbar_token_activity">Creation of a token</string>
+    <string name="toast_token_created">Token created</string>
+    <string name="toast_token_existing">Le token existe déjà</string>
+    <string name="topbar_data_activity">Datas token :</string>
 </resources>

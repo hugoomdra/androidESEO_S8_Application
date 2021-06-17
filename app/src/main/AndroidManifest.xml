@@ -15,13 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetFinalAndroid"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.DataActivity"></activity>
-        <activity
-            android:name=".ui.EasterEggActivity"
-            android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".ui.ParametreActivity" />
-        <activity android:name=".ui.HistoriqueActivity" />
-        <activity android:name=".ui.LocalisationActivity" />
+        <activity android:name=".ui.TokenActivity"
+            android:windowSoftInputMode="adjustResize" ></activity>
+        <activity android:name=".ui.DataActivity" />
         <activity
             android:name=".ui.SplashActivity"
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
@@ -31,7 +27,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.MainActivity" />
+        <activity android:name=".ui.MainActivity"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

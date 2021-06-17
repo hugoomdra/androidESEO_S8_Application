@@ -28,7 +28,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:height="70dp"
-        android:text="Actualiser les données"
+        android:text="@string/btn_actualiser"
         ></Button>
 
     <Button
@@ -36,7 +36,16 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:height="70dp"
-        android:text="Voir les dernières données"
+        android:text="@string/btn_see_data"
+        ></Button>
+
+    <Button
+        android:id="@+id/btn_generate_token"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:height="70dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/btn_generate_token"
         ></Button>
 
 
